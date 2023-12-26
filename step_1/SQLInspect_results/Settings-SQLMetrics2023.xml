@@ -1,0 +1,394 @@
+<?xml version="1.0" ?>
+<Metrics>
+  <Database>
+    <Statement Id="108" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="320">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="115" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="405">
+      <Metrics>
+        <Metric name="Fields" value="3"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="210" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="496">
+      <Metrics>
+        <Metric name="Fields" value="23"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="245" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="783">
+      <Metrics>
+        <Metric name="Fields" value="5"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="285" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="794">
+      <Metrics>
+        <Metric name="Fields" value="5"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="298" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="914">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="411" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="999">
+      <Metrics>
+        <Metric name="Fields" value="9"></Metric>
+        <Metric name="Nested Queries" value="6"></Metric>
+        <Metric name="Nesting Level" value="2"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="524" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1023">
+      <Metrics>
+        <Metric name="Fields" value="9"></Metric>
+        <Metric name="Nested Queries" value="6"></Metric>
+        <Metric name="Nesting Level" value="2"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="547" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1191">
+      <Metrics>
+        <Metric name="Fields" value="13"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="552" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1391">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="569" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1584">
+      <Metrics>
+        <Metric name="Fields" value="7"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="577" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1712">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="585" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1756">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="593" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1800">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="672" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1858">
+      <Metrics>
+        <Metric name="Fields" value="7"></Metric>
+        <Metric name="Nested Queries" value="3"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="697" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1971">
+      <Metrics>
+        <Metric name="Fields" value="18"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="730" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1997">
+      <Metrics>
+        <Metric name="Fields" value="18"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="791" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2207">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="799" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2246">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="807" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2287">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="815" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2329">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="823" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2366">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="831" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2410">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="839" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2418">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="847" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2472">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="855" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2509">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="863" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2549">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="874" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2636">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="885" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2679">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="894" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2937">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="909" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2997">
+      <Metrics>
+        <Metric name="Fields" value="2"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="947" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3048">
+      <Metrics>
+        <Metric name="Fields" value="4"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="958" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3107">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="969" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3149">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="980" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3185">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="988" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3363">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="996" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3629">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1004" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4221">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1012" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4259">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1020" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4292">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1028" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4331">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1045" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4371">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1053" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4427">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1071" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4462">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1089" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4494">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="1"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1097" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4527">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1116" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4583">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1131" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4583">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1139" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4612">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1150" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4649">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1158" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4684">
+      <Metrics>
+        <Metric name="Fields" value="1"></Metric>
+        <Metric name="Nested Queries" value="0"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1160" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4754">
+      <Metrics>
+        <Metric name="Nested Queries" value="1"></Metric>
+        <Metric name="Nesting Level" value="0"></Metric>
+      </Metrics>
+    </Statement>
+    <Statement Id="1169" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5123">
+    </Statement>
+    <Statement Id="1172" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5162">
+    </Statement>
+    <Statement Id="1193" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5183">
+    </Statement>
+    <Statement Id="1217" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5199">
+    </Statement>
+    <Statement Id="1231" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5217">
+    </Statement>
+    <Statement Id="1251" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5233">
+    </Statement>
+    <Statement Id="1263" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5277">
+    </Statement>
+    <Statement Id="1377" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5299">
+    </Statement>
+    <Statement Id="1404" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5339">
+    </Statement>
+    <Statement Id="1478" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5363">
+    </Statement>
+    <Statement Id="1502" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5389">
+    </Statement>
+    <Statement Id="1550" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5418">
+    </Statement>
+    <Statement Id="1566" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5453">
+    </Statement>
+</Database>  
+</Metrics>

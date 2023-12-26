@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<JavaMetrics>
+<JavaElement Kind="JavaProject" Name="Settings">
+  <Metrics>
+    <Metric name="Hotspots" value="67"></Metric>
+    <Metric name="Queries" value="68"></Metric>
+    <Metric name="Inserts" value="0"></Metric>
+    <Metric name="Selects" value="51"></Metric>
+    <Metric name="Updates" value="0"></Metric>
+    <Metric name="Deletes" value="1"></Metric>
+    <Metric name="Tables" value="12"></Metric>
+    <Metric name="Columns" value="85"></Metric>
+  </Metrics>
+  <Children>
+    <JavaElement Kind="PackageFragmentRoot" Name="java">
+      <Metrics>
+        <Metric name="Hotspots" value="67"></Metric>
+        <Metric name="Queries" value="68"></Metric>
+        <Metric name="Inserts" value="0"></Metric>
+        <Metric name="Selects" value="51"></Metric>
+        <Metric name="Updates" value="0"></Metric>
+        <Metric name="Deletes" value="1"></Metric>
+        <Metric name="Tables" value="12"></Metric>
+        <Metric name="Columns" value="85"></Metric>
+      </Metrics>
+      <Children>
+        <JavaElement Kind="PackageFragment" Name="org.purple.smoke">
+          <Metrics>
+            <Metric name="Hotspots" value="67"></Metric>
+            <Metric name="Queries" value="68"></Metric>
+            <Metric name="Inserts" value="0"></Metric>
+            <Metric name="Selects" value="51"></Metric>
+            <Metric name="Updates" value="0"></Metric>
+            <Metric name="Deletes" value="1"></Metric>
+            <Metric name="Tables" value="12"></Metric>
+            <Metric name="Columns" value="85"></Metric>
+          </Metrics>
+          <Children>
+            <JavaElement Kind="CompilationUnit" Name="Database.java">
+              <Metrics>
+                <Metric name="Hotspots" value="67"></Metric>
+                <Metric name="Queries" value="68"></Metric>
+                <Metric name="Inserts" value="0"></Metric>
+                <Metric name="Selects" value="51"></Metric>
+                <Metric name="Updates" value="0"></Metric>
+                <Metric name="Deletes" value="1"></Metric>
+                <Metric name="Tables" value="12"></Metric>
+                <Metric name="Columns" value="85"></Metric>
+              </Metrics>
+              <Children>
+              </Children>
+            </JavaElement>
+          </Children>
+        </JavaElement>
+      </Children>
+    </JavaElement>
+  </Children>
+</JavaElement>
+</JavaMetrics>
