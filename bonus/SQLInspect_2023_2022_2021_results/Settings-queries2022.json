@@ -1,0 +1,993 @@
+{
+  "Queries" : [ {
+    "id" : "1",
+    "Value" : "SELECT name, oid FROM fire",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "319",
+    "ExecString" : "m_db.rawQuery(\"SELECT name, oid FROM fire\",null)",
+    "CallStack" : [ {
+      "method" : "Database.readFires(Cryptography)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 309,
+      "callLine" : 319
+    } ]
+  }, {
+    "id" : "2",
+    "Value" : "SELECT passthrough, status_control, oid FROM neighbors",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "404",
+    "ExecString" : "m_db.rawQuery(\"SELECT passthrough, \" + \"status_control, \" + \"oid FROM neighbors\",null)",
+    "CallStack" : [ {
+      "method" : "Database.readNeighborOids(Cryptography)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 393,
+      "callLine" : 405
+    } ]
+  }, {
+    "id" : "3",
+    "Value" : "SELECT (SELECT COUNT(*) FROM outbound_queue o WHERE o.neighbor_oid = n.oid), n.bytes_read, n.bytes_written, n.echo_queue_size, n.ip_version, n.last_error, n.local_ip_address, n.local_port, n.non_tls, n.passthrough, n.proxy_ip_address, n.proxy_port, n.proxy_type, n.remote_certificate, n.remote_ip_address, n.remote_port, n.remote_scope_id, n.session_cipher, n.status, n.status_control, n.transport, n.uptime, n.oid FROM neighbors n ORDER BY n.oid",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "495",
+    "ExecString" : "m_db.rawQuery(\"SELECT \" + \"(SELECT COUNT(*) FROM outbound_queue o WHERE \" + \"o.neighbor_oid = n.oid), \"+ \"n.bytes_read, \"+ \"n.bytes_written, \"+ \"n.echo_queue_size, \"+ \"n.ip_version, \"+ \"n.last_error, \"+ \"n.local_ip_address, \"+ \"n.local_port, \"+ \"n.non_tls, \"+ \"n.passthrough, \"+ \"n.proxy_ip_address, \"+ \"n.proxy_port, \"+ \"n.proxy_type, \"+ \"n.remote_certificate, \"+ \"n.remote_ip_address, \"+ \"n.remote_port, \"+ \"n.remote_scope_id, \"+ \"n.session_cipher, \"+ \"n.status, \"+ \"n.status_control, \"+ \"n.transport, \"+ \"n.uptime, \"+ \"n.oid \"+ \"FROM neighbors n ORDER BY n.oid\",null)",
+    "CallStack" : [ {
+      "method" : "Database.readNeighbors(Cryptography)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 482,
+      "callLine" : 496
+    } ]
+  }, {
+    "id" : "4",
+    "Value" : "SELECT (SELECT s.name FROM siphash_ids s WHERE p.siphash_id_digest = s.siphash_id_digest) AS a, p.keystream, p.last_status_timestamp, p.siphash_id, p.oid FROM participants p",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "782",
+    "ExecString" : "m_db.rawQuery(\"SELECT \" + \"(SELECT s.name FROM siphash_ids s \" + \"WHERE p.siphash_id_digest = s.siphash_id_digest) \"+ \"AS a, \"+ \"p.keystream, \"+ \"p.last_status_timestamp, \"+ \"p.siphash_id, \"+ \"p.oid \"+ \"FROM participants p\",null)",
+    "CallStack" : [ {
+      "method" : "Database.readParticipants(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 767,
+      "callLine" : 783
+    } ]
+  }, {
+    "id" : "5",
+    "Value" : "SELECT (SELECT s.name FROM siphash_ids s WHERE p.siphash_id_digest = s.siphash_id_digest) AS a, p.keystream, p.last_status_timestamp, p.siphash_id, p.oid FROM participants p WHERE p.siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "793",
+    "ExecString" : "m_db.rawQuery(\"SELECT \" + \"(SELECT s.name FROM siphash_ids s \" + \"WHERE p.siphash_id_digest = s.siphash_id_digest) \"+ \"AS a, \"+ \"p.keystream, \"+ \"p.last_status_timestamp, \"+ \"p.siphash_id, \"+ \"p.oid \"+ \"FROM participants p WHERE p.siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.readParticipants(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 767,
+      "callLine" : 794
+    } ]
+  }, {
+    "id" : "6",
+    "Value" : "SELECT siphash_id, stream FROM siphash_ids WHERE siphash_id_digest NOT IN (SELECT siphash_id_digest FROM participants)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "913",
+    "ExecString" : "m_db.rawQuery(\"SELECT siphash_id, stream \" + \"FROM siphash_ids WHERE siphash_id_digest NOT IN \" + \"(SELECT siphash_id_digest FROM participants)\",null)",
+    "CallStack" : [ {
+      "method" : "Database.readNonSharedSipHashIds(Cryptography)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 902,
+      "callLine" : 914
+    } ]
+  }, {
+    "id" : "7",
+    "Value" : "SELECT (SELECT EXISTS(SELECT 1 FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest)) AS aa, (SELECT p.encryption_public_key_signed FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest) AS bb, (SELECT p.signature_public_key_signed FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest) AS cc, (SELECT COUNT(p.oid) FROM participants_keys p WHERE p.siphash_id_digest = s.siphash_id_digest) AS dd, (SELECT p.encryption_public_key_algorithm FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest) AS ee, s.name, s.siphash_id, s.stream, s.oid FROM siphash_ids s ORDER BY s.oid",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "998",
+    "ExecString" : "m_db.rawQuery(\"SELECT \" + \"(SELECT EXISTS(SELECT 1 FROM participants p WHERE \" + \"p.siphash_id_digest = s.siphash_id_digest)) AS aa, \"+ \"(SELECT p.encryption_public_key_signed \"+ \"FROM participants p \"+ \"WHERE p.siphash_id_digest = s.siphash_id_digest) AS \"+ \"bb, \"+ \"(SELECT p.signature_public_key_signed \"+ \"FROM participants p \"+ \"WHERE p.siphash_id_digest = s.siphash_id_digest) AS \"+ \"cc, \"+ \"(SELECT COUNT(p.oid) FROM participants_keys p \"+ \"WHERE p.siphash_id_digest = s.siphash_id_digest) AS \"+ \"dd, \"+ \"(SELECT p.encryption_public_key_algorithm FROM \"+ \"participants p WHERE p.siphash_id_digest = \"+ \"s.siphash_id_digest) AS ee, \"+ \"s.name, \"+ \"s.siphash_id, \"+ \"s.stream, \"+ \"s.oid \"+ \"FROM siphash_ids s ORDER BY s.oid\",null)",
+    "CallStack" : [ {
+      "method" : "Database.readSipHashIds(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 986,
+      "callLine" : 999
+    } ]
+  }, {
+    "id" : "8",
+    "Value" : "SELECT (SELECT EXISTS(SELECT 1 FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest)) AS aa, (SELECT p.encryption_public_key_signed FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest) AS bb, (SELECT p.signature_public_key_signed FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest) AS cc, (SELECT COUNT(p.oid) FROM participants_keys p WHERE p.siphash_id_digest = s.siphash_id_digest) AS dd, (SELECT p.encryption_public_key_algorithm FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest) AS ee, s.name, s.siphash_id, s.stream, s.oid FROM siphash_ids s WHERE s.siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1022",
+    "ExecString" : "m_db.rawQuery(\"SELECT \" + \"(SELECT EXISTS(SELECT 1 FROM participants p WHERE \" + \"p.siphash_id_digest = s.siphash_id_digest)) AS aa, \"+ \"(SELECT p.encryption_public_key_signed \"+ \"FROM participants p \"+ \"WHERE p.siphash_id_digest = s.siphash_id_digest) AS \"+ \"bb, \"+ \"(SELECT p.signature_public_key_signed \"+ \"FROM participants p \"+ \"WHERE p.siphash_id_digest = s.siphash_id_digest) AS \"+ \"cc, \"+ \"(SELECT COUNT(p.oid) FROM participants_keys p \"+ \"WHERE p.siphash_id_digest = s.siphash_id_digest) AS \"+ \"dd, \"+ \"(SELECT p.encryption_public_key_algorithm FROM \"+ \"participants p WHERE p.siphash_id_digest = \"+ \"s.siphash_id_digest) AS ee, \"+ \"s.name, \"+ \"s.siphash_id, \"+ \"s.stream, \"+ \"s.oid \"+ \"FROM siphash_ids s WHERE s.siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.readSipHashIds(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 986,
+      "callLine" : 1023
+    } ]
+  }, {
+    "id" : "9",
+    "Value" : "SELECT absolute_filename, destination, display_filename, file_digest, file_identity, file_size, is_download, key_type, read_interval, read_offset, status, transfer_rate, oid FROM steam_files WHERE is_download = {{question}} ORDER BY someoid",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1190",
+    "ExecString" : "m_db.rawQuery(\"SELECT absolute_filename, \" + \"destination, \" + \"display_filename, \"+ \"file_digest, \"+ \"file_identity, \"+ \"file_size, \"+ \"is_download, \"+ \"key_type, \"+ \"read_interval, \"+ \"read_offset, \"+ \"status, \"+ \"transfer_rate, \"+ \"oid \"+ \"FROM steam_files WHERE is_download = ? \"+ \"ORDER BY someoid\",new String[]{String.valueOf(direction)})",
+    "CallStack" : [ {
+      "method" : "Database.readSteams(Cryptography,short)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 1179,
+      "callLine" : 1191
+    } ]
+  }, {
+    "id" : "10",
+    "Value" : "SELECT siphash_id FROM participants",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1391",
+    "ExecString" : "m_db.rawQuery(\"SELECT siphash_id FROM participants\",null)",
+    "CallStack" : [ {
+      "method" : "Database.readSipHashIdStrings(Cryptography)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 1381,
+      "callLine" : 1392
+    } ]
+  }, {
+    "id" : "11",
+    "Value" : "SELECT attachment, from_smokestack, message, message_read, message_sent, timestamp, oid FROM participants_messages WHERE siphash_id_digest = {{question}} ORDER BY timestamp",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1584",
+    "ExecString" : "m_db.rawQuery(\"SELECT attachment, \" + \"from_smokestack, \" + \"message, \"+ \"message_read, \"+ \"message_sent, \"+ \"timestamp, \"+ \"oid \"+ \"FROM participants_messages \"+ \"WHERE siphash_id_digest = ? ORDER BY timestamp\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.readMemberChat(Cryptography,java.lang.String,int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 1563,
+      "callLine" : 1585
+    } ]
+  }, {
+    "id" : "12",
+    "Value" : "SELECT encryption_public_key FROM participants WHERE siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1712",
+    "ExecString" : "m_db.rawQuery(\"SELECT encryption_public_key \" + \"FROM participants WHERE siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.publicEncryptionKeyForSipHashId(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 1701,
+      "callLine" : 1713
+    } ]
+  }, {
+    "id" : "13",
+    "Value" : "SELECT signature_public_key FROM participants WHERE siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1756",
+    "ExecString" : "m_db.rawQuery(\"SELECT signature_public_key \" + \"FROM participants WHERE siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.publicSignatureKeyForSipHashId(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 1745,
+      "callLine" : 1757
+    } ]
+  }, {
+    "id" : "14",
+    "Value" : "SELECT signature_public_key FROM participants WHERE encryption_public_key_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1800",
+    "ExecString" : "m_db.rawQuery(\"SELECT signature_public_key \" + \"FROM participants WHERE encryption_public_key_digest = ?\",new String[]{Base64.encodeToString(digest,Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.signatureKeyForDigest(Cryptography,byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 1789,
+      "callLine" : 1801
+    } ]
+  }, {
+    "id" : "15",
+    "Value" : "SELECT (SELECT p.encryption_public_key FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest) AS a, (SELECT p.signature_public_key FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest) AS b, (SELECT p.encryption_public_key_algorithm FROM participants p WHERE p.siphash_id_digest = s.siphash_id_digest) AS c, s.siphash_id, s.name, s.stream, s.oid FROM siphash_ids s WHERE s.oid = {{question}} ORDER BY s.oid",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1858",
+    "ExecString" : "m_db.rawQuery(\"SELECT \" + \"(SELECT p.encryption_public_key FROM participants p \" + \"WHERE p.siphash_id_digest = s.siphash_id_digest) AS a, \"+ \"(SELECT p.signature_public_key FROM participants p \"+ \"WHERE p.siphash_id_digest = s.siphash_id_digest) AS b, \"+ \"(SELECT p.encryption_public_key_algorithm FROM \"+ \"participants p WHERE p.siphash_id_digest = \"+ \"s.siphash_id_digest) AS c, \"+ \"s.siphash_id, \"+ \"s.name, \"+ \"s.stream, \"+ \"s.oid \"+ \"FROM siphash_ids s WHERE s.oid = ? ORDER BY s.oid\",new String[]{oid})",
+    "CallStack" : [ {
+      "method" : "Database.readSipHashId(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 1847,
+      "callLine" : 1859
+    } ]
+  }, {
+    "id" : "16",
+    "Value" : "SELECT absolute_filename, destination, display_filename, ephemeral_private_key, ephemeral_public_key, file_digest, file_identity, file_size, is_download, is_locked, key_type, keystream, read_interval, read_offset, someoid, status, transfer_rate, oid FROM steam_files ORDER BY someoid",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1971",
+    "ExecString" : "m_db.rawQuery(\"SELECT absolute_filename, \" + \"destination, \" + \"display_filename, \"+ \"ephemeral_private_key, \"+ \"ephemeral_public_key, \"+ \"file_digest, \"+ \"file_identity, \"+ \"file_size, \"+ \"is_download, \"+ \"is_locked, \"+ \"key_type, \"+ \"keystream, \"+ \"read_interval, \"+ \"read_offset, \"+ \"someoid, \"+ \"status, \"+ \"transfer_rate, \"+ \"oid \"+ \"FROM steam_files ORDER BY someoid\",null)",
+    "CallStack" : [ {
+      "method" : "Database.readSteam(Cryptography,int,int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 1958,
+      "callLine" : 1972
+    } ]
+  }, {
+    "id" : "17",
+    "Value" : "SELECT absolute_filename, destination, display_filename, ephemeral_private_key, ephemeral_public_key, file_digest, file_identity, file_size, is_download, is_locked, key_type, keystream, read_interval, read_offset, someoid, status, transfer_rate, oid FROM steam_files WHERE someoid > CAST({{question}} AS INTEGER) ORDER BY someoid LIMIT 1",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "1997",
+    "ExecString" : "m_db.rawQuery(\"SELECT absolute_filename, \" + \"destination, \" + \"display_filename, \"+ \"ephemeral_private_key, \"+ \"ephemeral_public_key, \"+ \"file_digest, \"+ \"file_identity, \"+ \"file_size, \"+ \"is_download, \"+ \"is_locked, \"+ \"key_type, \"+ \"keystream, \"+ \"read_interval, \"+ \"read_offset, \"+ \"someoid, \"+ \"status, \"+ \"transfer_rate, \"+ \"oid \"+ \"FROM steam_files WHERE someoid > CAST(? AS INTEGER) \"+ \"ORDER BY someoid LIMIT 1\",new String[]{String.valueOf(someOid)})",
+    "CallStack" : [ {
+      "method" : "Database.readSteam(Cryptography,int,int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 1958,
+      "callLine" : 1998
+    } ]
+  }, {
+    "id" : "18",
+    "Value" : "SELECT LENGTH(attachment) + LENGTH(from_smokestack) + LENGTH(message) + LENGTH(message_digest) + LENGTH(message_identity_digest) + LENGTH(message_read) + LENGTH(message_sent) + LENGTH(siphash_id_digest) + LENGTH(timestamp) FROM participants_messages WHERE oid = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2204",
+    "ExecString" : "m_db.rawQuery(\"SELECT LENGTH(attachment) + \" + \"LENGTH(from_smokestack) + \" + \"LENGTH(message) + \"+ \"LENGTH(message_digest) + \"+ \"LENGTH(message_identity_digest) + \"+ \"LENGTH(message_read) + \"+ \"LENGTH(message_sent) + \"+ \"LENGTH(siphash_id_digest) + \"+ \"LENGTH(timestamp) \"+ \"FROM participants_messages WHERE oid = ?\",new String[]{String.valueOf(oid)})",
+    "CallStack" : [ {
+      "method" : "Database.messageDetails(int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2195,
+      "callLine" : 2205
+    } ]
+  }, {
+    "id" : "19",
+    "Value" : "SELECT name FROM siphash_ids WHERE siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2243",
+    "ExecString" : "m_db.rawQuery(\"SELECT name FROM siphash_ids WHERE siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.nameFromSipHashId(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2232,
+      "callLine" : 2244
+    } ]
+  }, {
+    "id" : "20",
+    "Value" : "SELECT encryption_public_key_algorithm FROM participants WHERE siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2284",
+    "ExecString" : "m_db.rawQuery(\"SELECT encryption_public_key_algorithm \" + \"FROM participants WHERE siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.publicKeyEncryptionAlgorithm(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2274,
+      "callLine" : 2285
+    } ]
+  }, {
+    "id" : "21",
+    "Value" : "SELECT status_control FROM neighbors WHERE oid = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2326",
+    "ExecString" : "m_db.rawQuery(\"SELECT status_control FROM neighbors WHERE oid = ?\",new String[]{String.valueOf(oid)})",
+    "CallStack" : [ {
+      "method" : "Database.readNeighborStatusControl(Cryptography,int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2316,
+      "callLine" : 2327
+    } ]
+  }, {
+    "id" : "22",
+    "Value" : "SELECT options FROM participants WHERE siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2363",
+    "ExecString" : "m_db.rawQuery(\"SELECT options \" + \"FROM participants WHERE siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.readParticipantOptions(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2352,
+      "callLine" : 2364
+    } ]
+  }, {
+    "id" : "23",
+    "Value" : "SELECT value FROM settings WHERE name = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2407",
+    "ExecString" : "m_db.rawQuery(\"SELECT value FROM settings WHERE name = ?\",new String[]{name})",
+    "CallStack" : [ {
+      "method" : "Database.readSetting(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2396,
+      "callLine" : 2408
+    } ]
+  }, {
+    "id" : "24",
+    "Value" : "SELECT value FROM settings WHERE name_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2415",
+    "ExecString" : "m_db.rawQuery(\"SELECT value FROM settings WHERE name_digest = ?\",new String[]{Base64.encodeToString(bytes,Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.readSetting(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2396,
+      "callLine" : 2416
+    } ]
+  }, {
+    "id" : "25",
+    "Value" : "SELECT siphash_id FROM siphash_ids WHERE oid = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2469",
+    "ExecString" : "m_db.rawQuery(\"SELECT siphash_id FROM siphash_ids WHERE oid = ?\",new String[]{oid})",
+    "CallStack" : [ {
+      "method" : "Database.readSipHashIdString(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2460,
+      "callLine" : 2470
+    } ]
+  }, {
+    "id" : "26",
+    "Value" : "SELECT destination FROM steam_files WHERE file_identity_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2506",
+    "ExecString" : "m_db.rawQuery(\"SELECT destination FROM steam_files \" + \"WHERE file_identity_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(fileIdentity),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.steamSipHashId(Cryptography,byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2495,
+      "callLine" : 2507
+    } ]
+  }, {
+    "id" : "27",
+    "Value" : "SELECT status FROM steam_files WHERE oid = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2546",
+    "ExecString" : "m_db.rawQuery(\"SELECT status FROM steam_files WHERE oid = ?\",new String[]{String.valueOf(oid)})",
+    "CallStack" : [ {
+      "method" : "Database.steamStatus(int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2536,
+      "callLine" : 2547
+    } ]
+  }, {
+    "id" : "28",
+    "Value" : "SELECT EXISTS(SELECT 1 FROM participants WHERE encryption_public_key_digest = {{question}})",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2633",
+    "ExecString" : "m_db.rawQuery(\"SELECT EXISTS(SELECT 1 \" + \"FROM participants WHERE \" + \"encryption_public_key_digest = ?)\",new String[]{Base64.encodeToString(Cryptography.sha512(Base64.decode(string.getBytes(),Base64.NO_WRAP)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.writeParticipant(Cryptography,byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2565,
+      "callLine" : 2634
+    } ]
+  }, {
+    "id" : "29",
+    "Value" : "SELECT EXISTS(SELECT 1 FROM participants WHERE signature_public_key_digest = {{question}})",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2676",
+    "ExecString" : "m_db.rawQuery(\"SELECT EXISTS(SELECT 1 \" + \"FROM participants WHERE \" + \"signature_public_key_digest = ?)\",new String[]{Base64.encodeToString(Cryptography.sha512(Base64.decode(string.getBytes(),Base64.NO_WRAP)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.writeParticipant(Cryptography,byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2565,
+      "callLine" : 2677
+    } ]
+  }, {
+    "id" : "30",
+    "Value" : "SELECT encryption_public_key_signed, signature_public_key_signed FROM participants WHERE siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2934",
+    "ExecString" : "m_db.rawQuery(\"SELECT encryption_public_key_signed, \" + \"signature_public_key_signed \" + \"FROM participants WHERE siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.keysSigned(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2924,
+      "callLine" : 2935
+    } ]
+  }, {
+    "id" : "31",
+    "Value" : "SELECT name, siphash_id FROM siphash_ids WHERE siphash_id_digest = (SELECT siphash_id_digest FROM participants WHERE encryption_public_key_digest = {{question}})",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "2994",
+    "ExecString" : "m_db.rawQuery(\"SELECT name, siphash_id \" + \"FROM siphash_ids WHERE siphash_id_digest = \" + \"(SELECT siphash_id_digest FROM participants \"+ \"WHERE encryption_public_key_digest = ?)\",new String[]{Base64.encodeToString(digest,Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.nameSipHashIdFromDigest(Cryptography,byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 2983,
+      "callLine" : 2995
+    } ]
+  }, {
+    "id" : "32",
+    "Value" : "SELECT attempts, message, message_identity_digest, oid FROM outbound_queue WHERE attempts < CAST({{question}} AS INTEGER) AND neighbor_oid = {{question}} AND (CAST({{question}} AS INTEGER) - timestamp) >= CAST({{question}} AS INTEGER) AND oid > CAST({{question}} AS INTEGER) ORDER BY oid LIMIT 1",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "3045",
+    "ExecString" : "m_db.rawQuery(\"SELECT attempts, message, message_identity_digest, oid \" + \"FROM outbound_queue \" + \"WHERE attempts < CAST(? AS INTEGER) AND \"+ \"neighbor_oid = ? AND \"+ \"(CAST(? AS INTEGER) - timestamp) >= CAST(? AS INTEGER) AND \"+ \"oid > CAST(? AS INTEGER) \"+ \"ORDER BY oid LIMIT 1\",new String[]{String.valueOf(MESSAGE_DELIVERY_ATTEMPTS),String.valueOf(neighborOid),String.valueOf(System.currentTimeMillis()),String.valueOf(Chat.CHAT_WINDOW / (long)MESSAGE_DELIVERY_ATTEMPTS),String.valueOf(messageOid)})",
+    "CallStack" : [ {
+      "method" : "Database.readOutboundMessage(int,int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 3035,
+      "callLine" : 3046
+    } ]
+  }, {
+    "id" : "33",
+    "Value" : "SELECT EXISTS(SELECT 1 FROM congestion_control WHERE digest = {{question}})",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "3104",
+    "ExecString" : "m_db.rawQuery(\"SELECT EXISTS(SELECT 1 FROM \" + \"congestion_control WHERE digest = ?)\",new String[]{Base64.encodeToString(Miscellaneous.longToByteArray(value),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.containsCongestionDigest(long)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 3089,
+      "callLine" : 3105
+    } ]
+  }, {
+    "id" : "34",
+    "Value" : "SELECT EXISTS(SELECT 1 FROM participants WHERE siphash_id_digest = {{question}})",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "3146",
+    "ExecString" : "m_db.rawQuery(\"SELECT EXISTS(SELECT 1 \" + \"FROM participants WHERE \" + \"siphash_id_digest = ?)\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.containsParticipant(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 3135,
+      "callLine" : 3147
+    } ]
+  }, {
+    "id" : "35",
+    "Value" : "SELECT EXISTS(SELECT 1 FROM steam_files WHERE file_identity_digest = {{question}})",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "3182",
+    "ExecString" : "m_db.rawQuery(\"SELECT EXISTS(SELECT 1 \" + \"FROM steam_files WHERE \" + \"file_identity_digest = ?)\",new String[]{Base64.encodeToString(cryptography.hmac(fileIdentity),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.containsSteam(Cryptography,byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 3172,
+      "callLine" : 3183
+    } ]
+  }, {
+    "id" : "36",
+    "Value" : "SELECT is_locked FROM steam_files WHERE oid = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "3355",
+    "ExecString" : "m_db.rawQuery(\"SELECT is_locked FROM steam_files WHERE oid = ?\",new String[]{String.valueOf(oid)})",
+    "CallStack" : [ {
+      "method" : "Database.isSteamLocked(int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 3346,
+      "callLine" : 3356
+    } ]
+  }, {
+    "id" : "37",
+    "Value" : "SELECT siphash_id_digest FROM participants_messages WHERE message_identity_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "3621",
+    "ExecString" : "m_db.rawQuery(\"SELECT siphash_id_digest FROM \" + \"participants_messages \" + \"WHERE message_identity_digest = ?\",new String[]{messageIdentityDigest})",
+    "CallStack" : [ {
+      "method" : "Database.writeMessageStatus(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 3595,
+      "callLine" : 3622
+    } ]
+  }, {
+    "id" : "38",
+    "Value" : "SELECT stream FROM fire WHERE name_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4213",
+    "ExecString" : "m_db.rawQuery(\"SELECT stream FROM fire WHERE name_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(name.getBytes(StandardCharsets.ISO_8859_1)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.fireStream(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4203,
+      "callLine" : 4214
+    } ]
+  }, {
+    "id" : "39",
+    "Value" : "SELECT remote_certificate FROM neighbors WHERE oid = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4251",
+    "ExecString" : "m_db.rawQuery(\"SELECT remote_certificate FROM neighbors WHERE oid = ?\",new String[]{String.valueOf(oid)})",
+    "CallStack" : [ {
+      "method" : "Database.neighborRemoteCertificate(Cryptography,int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4240,
+      "callLine" : 4252
+    } ]
+  }, {
+    "id" : "40",
+    "Value" : "SELECT keystream FROM participants WHERE siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4284",
+    "ExecString" : "m_db.rawQuery(\"SELECT keystream FROM participants \" + \"WHERE siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.participantKeyStream(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4273,
+      "callLine" : 4285
+    } ]
+  }, {
+    "id" : "41",
+    "Value" : "SELECT keystream FROM participants WHERE encryption_public_key_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4323",
+    "ExecString" : "m_db.rawQuery(\"SELECT keystream FROM participants \" + \"WHERE encryption_public_key_digest = ?\",new String[]{Base64.encodeToString(digest,Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.participantKeyStream(Cryptography,byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4312,
+      "callLine" : 4324
+    } ]
+  }, {
+    "id" : "42",
+    "Value" : "SELECT keystream FROM participants_keys WHERE siphash_id_digest = (SELECT siphash_id_digest FROM participants WHERE encryption_public_key_digest = {{question}}) ORDER BY timestamp DESC",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4363",
+    "ExecString" : "m_db.rawQuery(\"SELECT keystream FROM participants_keys \" + \"WHERE siphash_id_digest = \" + \"(SELECT siphash_id_digest FROM participants WHERE \"+ \"encryption_public_key_digest = ?) ORDER BY timestamp DESC\",new String[]{Base64.encodeToString(digest,Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.participantKeyStream(Cryptography,byte[],byte[],byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4346,
+      "callLine" : 4364
+    } ]
+  }, {
+    "id" : "43",
+    "Value" : "SELECT keystream FROM steam_files WHERE file_identity_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4419",
+    "ExecString" : "m_db.rawQuery(\"SELECT keystream FROM steam_files \" + \"WHERE file_identity_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(fileIdentity),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.steamKeyStream(Cryptography,byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4408,
+      "callLine" : 4420
+    } ]
+  }, {
+    "id" : "44",
+    "Value" : "SELECT oid FROM participants WHERE siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4455",
+    "ExecString" : "m_db.rawQuery(\"SELECT oid FROM participants WHERE siphash_id_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.participantOidFromSipHash(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4444,
+      "callLine" : 4456
+    } ]
+  }, {
+    "id" : "45",
+    "Value" : "SELECT COUNT(*) FROM participants WHERE LENGTH(keystream) >= {{na}} AND oid = {{na}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4511",
+    "ExecString" : "m_db.rawQuery(stringBuilder.toString(),null)",
+    "CallStack" : [ {
+      "method" : "Database.participantsWithSessionKeys(int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4480,
+      "callLine" : 4511
+    } ]
+  }, {
+    "id" : "46",
+    "Value" : "SELECT COUNT(*) FROM participants WHERE LENGTH(keystream) >= {{na}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4511",
+    "ExecString" : "m_db.rawQuery(stringBuilder.toString(),null)",
+    "CallStack" : [ {
+      "method" : "Database.participantsWithSessionKeys(int)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4480,
+      "callLine" : 4511
+    } ]
+  }, {
+    "id" : "47",
+    "Value" : "SELECT someoid FROM steam_files WHERE file_identity_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4540",
+    "ExecString" : "m_db.rawQuery(\"SELECT someoid FROM steam_files WHERE \" + \"file_identity_digest = ?\",new String[]{Base64.encodeToString(cryptography.hmac(fileIdentity),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.steamOidFromFileIdentity(Cryptography,byte[])",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4529,
+      "callLine" : 4541
+    } ]
+  }, {
+    "id" : "48",
+    "Value" : "SELECT COUNT(*) FROM participants_messages WHERE siphash_id_digest = {{question}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4577",
+    "ExecString" : "m_db.rawQuery(stringBuilder.toString(),new String[]{Base64.encodeToString(cryptography.hmac(sipHashId.toUpperCase().trim().getBytes(StandardCharsets.UTF_8)),Base64.DEFAULT)})",
+    "CallStack" : [ {
+      "method" : "Database.countOfMessages(Cryptography,java.lang.String)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4563,
+      "callLine" : 4578
+    } ]
+  }, {
+    "id" : "49",
+    "Value" : "SELECT COUNT(*) FROM steam_files",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4612",
+    "ExecString" : "m_db.rawQuery(\"SELECT COUNT(*) FROM steam_files\",null)",
+    "CallStack" : [ {
+      "method" : "Database.countOfSteams()",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4602,
+      "callLine" : 4612
+    } ]
+  }, {
+    "id" : "50",
+    "Value" : "DELETE FROM participants WHERE siphash_id_digest NOT IN (SELECT siphash_id_digest FROM siphash_ids)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "4679",
+    "ExecString" : "m_db.rawQuery(\"DELETE FROM participants WHERE siphash_id_digest \" + \"NOT IN (SELECT siphash_id_digest FROM siphash_ids)\",null)",
+    "CallStack" : [ {
+      "method" : "Database.cleanDanglingParticipants()",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 4668,
+      "callLine" : 4680
+    } ]
+  }, {
+    "id" : "51",
+    "Value" : "VACUUM",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5040",
+    "ExecString" : "db.execSQL(\"VACUUM\")",
+    "CallStack" : [ {
+      "method" : "Database.onConfigure(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5024,
+      "callLine" : 5040
+    } ]
+  }, {
+    "id" : "52",
+    "Value" : "PRAGMA secure_delete = True",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5048",
+    "ExecString" : "db.execSQL(\"PRAGMA secure_delete = True\",null)",
+    "CallStack" : [ {
+      "method" : "Database.onConfigure(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5024,
+      "callLine" : 5048
+    } ]
+  }, {
+    "id" : "53",
+    "Value" : "CREATE TABLE IF NOT EXISTS siphash_ids (name TEXT NOT NULL, siphash_id TEXT NOT NULL, siphash_id_digest TEXT NOT NULL PRIMARY KEY, stream TEXT NOT NULL)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5087",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5087
+    } ]
+  }, {
+    "id" : "54",
+    "Value" : "CREATE TABLE IF NOT EXISTS arson_keys (enabled TEXT NOT NULL, message_keystream TEXT NOT NULL, message_keystream_digest TEXT NOT NULL, siphash_id_digest TEXT NOT NULL, FOREIGN KEY (siphash_id_digest) REFERENCES siphash_ids (siphash_id_digest) ON DELETE CASCADE, PRIMARY KEY (message_keystream_digest, siphash_id_digest))",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5108",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5108
+    } ]
+  }, {
+    "id" : "55",
+    "Value" : "CREATE TABLE IF NOT EXISTS congestion_control (digest TEXT NOT NULL PRIMARY KEY, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5124",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5124
+    } ]
+  }, {
+    "id" : "56",
+    "Value" : "CREATE TABLE IF NOT EXISTS fire (name TEXT NOT NULL, name_digest TEXT NOT NULL, stream TEXT NOT NULL, stream_digest TEXT NOT NULL PRIMARY KEY)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5142",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5142
+    } ]
+  }, {
+    "id" : "57",
+    "Value" : "CREATE TABLE IF NOT EXISTS log (event TEXT NOT NULL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5158",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5158
+    } ]
+  }, {
+    "id" : "58",
+    "Value" : "CREATE TABLE IF NOT EXISTS neighbors (bytes_read TEXT NOT NULL, bytes_written TEXT NOT NULL, echo_queue_size TEXT NOT NULL, ip_version TEXT NOT NULL, last_error TEXT NOT NULL, local_ip_address TEXT NOT NULL, local_ip_address_digest TEXT NOT NULL, local_port TEXT NOT NULL, local_port_digest TEXT NOT NULL, non_tls TEXT NOT NULL, passthrough TEXT NOT NULL, proxy_ip_address TEXT NOT NULL, proxy_port TEXT NOT NULL, proxy_type TEXT NOT NULL, remote_certificate TEXT NOT NULL, remote_ip_address TEXT NOT NULL, remote_ip_address_digest TEXT NOT NULL, remote_port TEXT NOT NULL, remote_port_digest TEXT NOT NULL, remote_scope_id TEXT NOT NULL, session_cipher TEXT NOT NULL, status TEXT NOT NULL, status_control TEXT NOT NULL, transport TEXT NOT NULL, transport_digest TEXT NOT NULL, uptime TEXT NOT NULL, user_defined_digest TEXT NOT NULL, PRIMARY KEY (remote_ip_address_digest, remote_port_digest, transport_digest))",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5202",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5202
+    } ]
+  }, {
+    "id" : "59",
+    "Value" : "CREATE TABLE IF NOT EXISTS outbound_queue (attempts INTEGER DEFAULT 0, message TEXT NOT NULL, message_identity_digest TEXT NOT NULL, neighbor_oid INTEGER NOT NULL, timestamp INTEGER DEFAULT 0, PRIMARY KEY (message, neighbor_oid))",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5224",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5224
+    } ]
+  }, {
+    "id" : "60",
+    "Value" : "CREATE TABLE IF NOT EXISTS participants (encryption_public_key TEXT NOT NULL, encryption_public_key_algorithm TEXT NOT NULL, encryption_public_key_digest TEXT NOT NULL, encryption_public_key_signed TEXT NOT NULL, identity TEXT NOT NULL, keystream TEXT NOT NULL, last_status_timestamp TEXT NOT NULL, options TEXT NOT NULL, signature_public_key TEXT NOT NULL, signature_public_key_digest TEXT NOT NULL, signature_public_key_signed TEXT NOT NULL, siphash_id TEXT NOT NULL, siphash_id_digest TEXT NOT NULL, special_value_a TEXT, special_value_b TEXT, special_value_c TEXT, special_value_d TEXT, special_value_e TEXT, FOREIGN KEY (siphash_id_digest) REFERENCES siphash_ids (siphash_id_digest) ON DELETE CASCADE, PRIMARY KEY (siphash_id_digest))",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5264",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5264
+    } ]
+  }, {
+    "id" : "61",
+    "Value" : "CREATE TABLE IF NOT EXISTS participants_keys (keystream TEXT NOT NULL, keystream_digest TEXT NOT NULL PRIMARY KEY, siphash_id_digest TEXT NOT NULL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (siphash_id_digest) REFERENCES siphash_ids (siphash_id_digest) ON DELETE CASCADE)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5288",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5288
+    } ]
+  }, {
+    "id" : "62",
+    "Value" : "CREATE TABLE IF NOT EXISTS participants_messages (attachment BLOB NOT NULL, from_smokestack TEXT NOT NULL, message TEXT NOT NULL, message_digest TEXT NOT NULL, message_identity_digest TEXT NOT NULL, message_read TEXT NOT NULL, message_sent TEXT NOT NULL, siphash_id_digest TEXT NOT NULL, timestamp INTEGER NOT NULL, FOREIGN KEY (siphash_id_digest) REFERENCES siphash_ids (siphash_id_digest) ON DELETE CASCADE, PRIMARY KEY (message_digest, siphash_id_digest))",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5314",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5314
+    } ]
+  }, {
+    "id" : "63",
+    "Value" : "CREATE INDEX IF NOT EXISTS participants_messages_timestamp_index ON participants_messages(timestamp)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5326",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5326
+    } ]
+  }, {
+    "id" : "64",
+    "Value" : "CREATE TABLE IF NOT EXISTS settings (name TEXT NOT NULL, name_digest TEXT NOT NULL PRIMARY KEY, value TEXT NOT NULL)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5343",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5343
+    } ]
+  }, {
+    "id" : "65",
+    "Value" : "CREATE TABLE IF NOT EXISTS steam_files (absolute_filename TEXT NOT NULL, destination TEXT NOT NULL, display_filename TEXT NOT NULL, ephemeral_private_key TEXT NOT NULL, ephemeral_public_key TEXT NOT NULL, file_digest TEXT NOT NULL, file_identity TEXT NOT NULL, file_identity_digest TEXT NOT NULL, file_size TEXT NOT NULL, is_download TEXT NOT NULL, is_locked INTEGER NOT NULL DEFAULT 1, key_type TEXT NOT NULL, keystream TEXT NOT NULL, read_interval TEXT NOT NULL, read_offset TEXT NOT NULL, someoid INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, status TEXT NOT NULL, transfer_rate TEXT NOT NULL)",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5378",
+    "ExecString" : "db.execSQL(str)",
+    "CallStack" : [ {
+      "method" : "Database.onCreate(android.database.sqlite.SQLiteDatabase)",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5063,
+      "callLine" : 5378
+    } ]
+  }, {
+    "id" : "66",
+    "Value" : "{{na}}",
+    "HotspotFinder" : "AndroidHotspotFinder",
+    "ExecPackage" : "",
+    "ExecClass" : "Database",
+    "ExecFile" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+    "ExecLine" : "5597",
+    "ExecString" : "m_db.execSQL(string)",
+    "CallStack" : [ {
+      "method" : "Database.resetAndDrop()",
+      "file" : "/Users/mikel/Downloads/smoke-2022.11.15/Smoke/app/src/main/java/org/purple/smoke/Database.java",
+      "methodLine" : 5573,
+      "callLine" : 5597
+    } ]
+  } ]
+}

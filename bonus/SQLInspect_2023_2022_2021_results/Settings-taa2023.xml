@@ -1,0 +1,659 @@
+<?xml version="1.0" ?>
+<TableAccesses>
+  <Database>
+    <Statement Id="108" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="320">
+      <Tables>
+        <Table name="DB.SCH.fire"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.fire.name"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="115" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="405">
+      <Tables>
+        <Table name="DB.SCH.neighbors"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.neighbors.status_control"></Column>
+        <Column name="DB.SCH.neighbors.passthrough"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="210" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="496">
+      <Tables>
+        <Table name="DB.SCH.neighbors"></Table>
+        <Table name="DB.SCH.outbound_queue"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.neighbors.bytes_written"></Column>
+        <Column name="DB.SCH.neighbors.remote_certificate"></Column>
+        <Column name="DB.SCH.neighbors.remote_ip_address"></Column>
+        <Column name="DB.SCH.neighbors.status"></Column>
+        <Column name="DB.SCH.neighbors.transport"></Column>
+        <Column name="DB.SCH.neighbors.non_tls"></Column>
+        <Column name="DB.SCH.neighbors.status_control"></Column>
+        <Column name="DB.SCH.neighbors.passthrough"></Column>
+        <Column name="DB.SCH.neighbors.local_ip_address"></Column>
+        <Column name="DB.SCH.neighbors.local_port"></Column>
+        <Column name="DB.SCH.neighbors.echo_queue_size"></Column>
+        <Column name="DB.SCH.outbound_queue.neighbor_oid"></Column>
+        <Column name="DB.SCH.neighbors.proxy_type"></Column>
+        <Column name="DB.SCH.neighbors.bytes_read"></Column>
+        <Column name="DB.SCH.neighbors.ip_version"></Column>
+        <Column name="DB.SCH.neighbors.last_error"></Column>
+        <Column name="DB.SCH.neighbors.proxy_port"></Column>
+        <Column name="DB.SCH.neighbors.session_cipher"></Column>
+        <Column name="DB.SCH.neighbors.remote_port"></Column>
+        <Column name="DB.SCH.neighbors.uptime"></Column>
+        <Column name="DB.SCH.neighbors.proxy_ip_address"></Column>
+        <Column name="DB.SCH.neighbors.remote_scope_id"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="245" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="783">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.keystream"></Column>
+        <Column name="DB.SCH.siphash_ids.name"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.last_status_timestamp"></Column>
+        <Column name="DB.SCH.participants.siphash_id"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="285" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="794">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.keystream"></Column>
+        <Column name="DB.SCH.siphash_ids.name"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.last_status_timestamp"></Column>
+        <Column name="DB.SCH.participants.siphash_id"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="298" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="914">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.siphash_ids.siphash_id"></Column>
+        <Column name="DB.SCH.siphash_ids.stream"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="411" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="999">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+        <Table name="DB.SCH.participants"></Table>
+        <Table name="DB.SCH.participants_keys"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants_keys.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_signed"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id"></Column>
+        <Column name="DB.SCH.siphash_ids.stream"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_algorithm"></Column>
+        <Column name="DB.SCH.siphash_ids.name"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.signature_public_key_signed"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="524" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1023">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+        <Table name="DB.SCH.participants"></Table>
+        <Table name="DB.SCH.participants_keys"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants_keys.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_signed"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id"></Column>
+        <Column name="DB.SCH.siphash_ids.stream"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_algorithm"></Column>
+        <Column name="DB.SCH.siphash_ids.name"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.signature_public_key_signed"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="547" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1191">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.steam_files.destination"></Column>
+        <Column name="DB.SCH.steam_files.file_size"></Column>
+        <Column name="DB.SCH.steam_files.key_type"></Column>
+        <Column name="DB.SCH.steam_files.file_identity"></Column>
+        <Column name="DB.SCH.steam_files.read_interval"></Column>
+        <Column name="DB.SCH.steam_files.someoid"></Column>
+        <Column name="DB.SCH.steam_files.status"></Column>
+        <Column name="DB.SCH.steam_files.read_offset"></Column>
+        <Column name="DB.SCH.steam_files.transfer_rate"></Column>
+        <Column name="DB.SCH.steam_files.display_filename"></Column>
+        <Column name="DB.SCH.steam_files.file_digest"></Column>
+        <Column name="DB.SCH.steam_files.absolute_filename"></Column>
+        <Column name="DB.SCH.steam_files.is_download"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="552" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1391">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.siphash_id"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="569" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1584">
+      <Tables>
+        <Table name="DB.SCH.participants_messages"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants_messages.message_sent"></Column>
+        <Column name="DB.SCH.participants_messages.message"></Column>
+        <Column name="DB.SCH.participants_messages.message_read"></Column>
+        <Column name="DB.SCH.participants_messages.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants_messages.attachment"></Column>
+        <Column name="DB.SCH.participants_messages.timestamp"></Column>
+        <Column name="DB.SCH.participants_messages.from_smokestack"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="577" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1712">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.encryption_public_key"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="585" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1756">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.signature_public_key"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="593" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1800">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.encryption_public_key_digest"></Column>
+        <Column name="DB.SCH.participants.signature_public_key"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="672" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1858">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.siphash_ids.siphash_id"></Column>
+        <Column name="DB.SCH.siphash_ids.stream"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_algorithm"></Column>
+        <Column name="DB.SCH.siphash_ids.name"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.signature_public_key"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="697" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1971">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.steam_files.ephemeral_private_key"></Column>
+        <Column name="DB.SCH.steam_files.is_locked"></Column>
+        <Column name="DB.SCH.steam_files.keystream"></Column>
+        <Column name="DB.SCH.steam_files.destination"></Column>
+        <Column name="DB.SCH.steam_files.file_size"></Column>
+        <Column name="DB.SCH.steam_files.key_type"></Column>
+        <Column name="DB.SCH.steam_files.file_identity"></Column>
+        <Column name="DB.SCH.steam_files.read_interval"></Column>
+        <Column name="DB.SCH.steam_files.someoid"></Column>
+        <Column name="DB.SCH.steam_files.status"></Column>
+        <Column name="DB.SCH.steam_files.ephemeral_public_key"></Column>
+        <Column name="DB.SCH.steam_files.read_offset"></Column>
+        <Column name="DB.SCH.steam_files.transfer_rate"></Column>
+        <Column name="DB.SCH.steam_files.display_filename"></Column>
+        <Column name="DB.SCH.steam_files.file_digest"></Column>
+        <Column name="DB.SCH.steam_files.absolute_filename"></Column>
+        <Column name="DB.SCH.steam_files.is_download"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="730" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="1997">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.steam_files.ephemeral_private_key"></Column>
+        <Column name="DB.SCH.steam_files.is_locked"></Column>
+        <Column name="DB.SCH.steam_files.keystream"></Column>
+        <Column name="DB.SCH.steam_files.destination"></Column>
+        <Column name="DB.SCH.steam_files.file_size"></Column>
+        <Column name="DB.SCH.steam_files.key_type"></Column>
+        <Column name="DB.SCH.steam_files.file_identity"></Column>
+        <Column name="DB.SCH.steam_files.read_interval"></Column>
+        <Column name="DB.SCH.steam_files.someoid"></Column>
+        <Column name="DB.SCH.steam_files.status"></Column>
+        <Column name="DB.SCH.steam_files.ephemeral_public_key"></Column>
+        <Column name="DB.SCH.steam_files.read_offset"></Column>
+        <Column name="DB.SCH.steam_files.transfer_rate"></Column>
+        <Column name="DB.SCH.steam_files.display_filename"></Column>
+        <Column name="DB.SCH.steam_files.file_digest"></Column>
+        <Column name="DB.SCH.steam_files.absolute_filename"></Column>
+        <Column name="DB.SCH.steam_files.is_download"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="791" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2207">
+      <Tables>
+        <Table name="DB.SCH.participants_messages"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants_messages.message_sent"></Column>
+        <Column name="DB.SCH.participants_messages.message"></Column>
+        <Column name="DB.SCH.participants_messages.message_read"></Column>
+        <Column name="DB.SCH.participants_messages.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants_messages.message_identity_digest"></Column>
+        <Column name="DB.SCH.participants_messages.message_digest"></Column>
+        <Column name="DB.SCH.participants_messages.attachment"></Column>
+        <Column name="DB.SCH.participants_messages.from_smokestack"></Column>
+        <Column name="DB.SCH.participants_messages.timestamp"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="799" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2246">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.siphash_ids.name"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="807" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2287">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.encryption_public_key_algorithm"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="815" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2329">
+      <Tables>
+        <Table name="DB.SCH.neighbors"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.neighbors.status_control"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="823" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2366">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.options"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="831" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2410">
+      <Tables>
+        <Table name="DB.SCH.settings"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.settings.value"></Column>
+        <Column name="DB.SCH.settings.name"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="839" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2418">
+      <Tables>
+        <Table name="DB.SCH.settings"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.settings.value"></Column>
+        <Column name="DB.SCH.settings.name_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="847" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2472">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.siphash_ids.siphash_id"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="855" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2509">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.steam_files.destination"></Column>
+        <Column name="DB.SCH.steam_files.file_identity_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="863" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2549">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.steam_files.status"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="874" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2636">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.encryption_public_key_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="885" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2679">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.signature_public_key_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="894" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2937">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.encryption_public_key_signed"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.signature_public_key_signed"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="909" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="2997">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.siphash_ids.siphash_id"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_digest"></Column>
+        <Column name="DB.SCH.siphash_ids.name"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="947" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3048">
+      <Tables>
+        <Table name="DB.SCH.outbound_queue"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.outbound_queue.attempts"></Column>
+        <Column name="DB.SCH.outbound_queue.timestamp"></Column>
+        <Column name="DB.SCH.outbound_queue.message_identity_digest"></Column>
+        <Column name="DB.SCH.outbound_queue.message"></Column>
+        <Column name="DB.SCH.outbound_queue.neighbor_oid"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="958" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3107">
+      <Tables>
+        <Table name="DB.SCH.congestion_control"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.congestion_control.digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="969" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3149">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="980" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3185">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.steam_files.file_identity_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="988" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3363">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.steam_files.is_locked"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="996" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="3629">
+      <Tables>
+        <Table name="DB.SCH.participants_messages"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants_messages.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants_messages.message_identity_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1004" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4221">
+      <Tables>
+        <Table name="DB.SCH.fire"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.fire.stream"></Column>
+        <Column name="DB.SCH.fire.name_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1012" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4259">
+      <Tables>
+        <Table name="DB.SCH.neighbors"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.neighbors.remote_certificate"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1020" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4292">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.keystream"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1028" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4331">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.keystream"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1045" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4371">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+        <Table name="DB.SCH.participants_keys"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants_keys.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_digest"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants_keys.keystream"></Column>
+        <Column name="DB.SCH.participants_keys.timestamp"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1053" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4427">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.steam_files.keystream"></Column>
+        <Column name="DB.SCH.steam_files.file_identity_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1071" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4462">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+        <Table name="DB.SCH.participants_keys"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants_keys.siphash_id_digest"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1089" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4494">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+        <Table name="DB.SCH.participants_keys"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants_keys.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1097" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4527">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1116" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4583">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.keystream"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1131" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4583">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.keystream"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1139" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4612">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.steam_files.file_identity_digest"></Column>
+        <Column name="DB.SCH.steam_files.someoid"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1150" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4649">
+      <Tables>
+        <Table name="DB.SCH.participants_messages"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants_messages.siphash_id_digest"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1158" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4684">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1160" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="4754">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+      <Columns>
+        <Column name="DB.SCH.participants.encryption_public_key_signed"></Column>
+        <Column name="DB.SCH.participants.special_value_b"></Column>
+        <Column name="DB.SCH.participants.special_value_e"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_algorithm"></Column>
+        <Column name="DB.SCH.participants.last_status_timestamp"></Column>
+        <Column name="DB.SCH.participants.special_value_a"></Column>
+        <Column name="DB.SCH.participants.special_value_c"></Column>
+        <Column name="DB.SCH.siphash_ids.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.special_value_d"></Column>
+        <Column name="DB.SCH.participants.signature_public_key_digest"></Column>
+        <Column name="DB.SCH.participants.identity"></Column>
+        <Column name="DB.SCH.participants.keystream"></Column>
+        <Column name="DB.SCH.participants.encryption_public_key_digest"></Column>
+        <Column name="DB.SCH.participants.options"></Column>
+        <Column name="DB.SCH.participants.siphash_id_digest"></Column>
+        <Column name="DB.SCH.participants.siphash_id"></Column>
+        <Column name="DB.SCH.participants.signature_public_key"></Column>
+        <Column name="DB.SCH.participants.signature_public_key_signed"></Column>
+      </Columns>
+    </Statement>
+    <Statement Id="1169" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5123">
+    </Statement>
+    <Statement Id="1172" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5162">
+      <Tables>
+        <Table name="DB.SCH.siphash_ids"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1193" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5183">
+      <Tables>
+        <Table name="DB.SCH.arson_keys"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1217" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5199">
+      <Tables>
+        <Table name="DB.SCH.congestion_control"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1231" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5217">
+      <Tables>
+        <Table name="DB.SCH.fire"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1251" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5233">
+      <Tables>
+        <Table name="DB.SCH.log"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1263" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5277">
+      <Tables>
+        <Table name="DB.SCH.neighbors"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1377" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5299">
+      <Tables>
+        <Table name="DB.SCH.outbound_queue"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1404" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5339">
+      <Tables>
+        <Table name="DB.SCH.participants"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1478" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5363">
+      <Tables>
+        <Table name="DB.SCH.participants_keys"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1502" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5389">
+      <Tables>
+        <Table name="DB.SCH.participants_messages"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1550" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5418">
+      <Tables>
+        <Table name="DB.SCH.settings"></Table>
+      </Tables>
+    </Statement>
+    <Statement Id="1566" Path="/Users/mikel/Downloads/smoke-master/Smoke/app/src/main/java/org/purple/smoke/Database.java" Line="5453">
+      <Tables>
+        <Table name="DB.SCH.steam_files"></Table>
+      </Tables>
+    </Statement>
+</Database>  
+</TableAccesses>
